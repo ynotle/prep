@@ -19,4 +19,4 @@ This is a personal learning and interview prep repository for a software interns
 
 ## Git Workflow
 
-Commit and push to GitHub (`github.com/ynotle/prep`) after every meaningful change. Use clear, descriptive commit messages.
+After every meaningful change — new content, edits, new files — commit and push to GitHub (`github.com/ynotle/prep`). Do not batch up multiple unrelated changes into one commit. Each commit should represent one logical unit of work with a clear, descriptive message so the history is easy to read and any state can be recovered.
