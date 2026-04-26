@@ -128,6 +128,73 @@ async function getData() {
 
 ---
 
+## Phase 1.5 — JSON (JavaScript Object Notation)
+
+JSON was heavily emphasized and comes up constantly in real-world JS work — APIs, config files, cloud tools, and databases all communicate using JSON. Learn this early.
+
+### What JSON Is
+JSON is a text format for representing structured data. It looks almost identical to a JavaScript object, which makes it easy to work with in JS.
+
+```json
+{
+  "name": "Leyton",
+  "age": 22,
+  "skills": ["Python", "JavaScript"],
+  "internship": {
+    "company": "Medra",
+    "focus": "go to market tooling"
+  }
+}
+```
+
+### JSON vs JavaScript Objects
+They look nearly identical — the key difference is that **JSON requires double-quoted keys**.
+
+```javascript
+// JavaScript object (keys don't need quotes)
+const person = { name: "Leyton", age: 22 };
+
+// JSON string (keys must be quoted — it's just text)
+const jsonString = '{"name": "Leyton", "age": 22}';
+```
+
+### The Two Essential Methods
+
+```javascript
+// JSON.stringify() — convert a JS object → JSON string (for sending data)
+const obj = { filename: "report.pdf", chunks: ["a1b2", "c3d4"] };
+const json = JSON.stringify(obj);
+// json is now the string: '{"filename":"report.pdf","chunks":["a1b2","c3d4"]}'
+
+// JSON.parse() — convert a JSON string → JS object (for receiving data)
+const received = '{"filename":"report.pdf","chunks":["a1b2","c3d4"]}';
+const parsed = JSON.parse(received);
+parsed.filename;  // "report.pdf"
+parsed.chunks;    // ["a1b2", "c3d4"]
+```
+
+Think of it like packing and unpacking a box:
+- `stringify` = pack a JS object into a string to send somewhere
+- `parse` = unpack a string back into a JS object you can work with
+
+### Why It Matters for the Interview Problem
+The manifest in the cloud storage problem was stored as JSON:
+```javascript
+// store_file used JSON.stringify to serialize the manifest before storing it
+const manifest = JSON.stringify({ chunkIds, checksums });
+await put_data(new TextEncoder().encode(manifest), manifestId);
+
+// get_file used JSON.parse to reconstruct it after retrieval
+const { chunkIds, checksums } = JSON.parse(new TextDecoder().decode(manifestBytes));
+```
+
+### Gotchas
+- JSON **cannot** contain functions, `undefined`, or circular references — they get dropped or throw errors
+- All strings in JSON must use double quotes (not single quotes)
+- Numbers, booleans (`true`/`false`), `null`, arrays, and nested objects are all valid JSON values
+
+---
+
 ## Phase 2 — HTML Basics + Connecting to JavaScript
 
 HTML is the structure of a webpage. JavaScript is the behavior. They work together.
