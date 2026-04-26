@@ -430,15 +430,15 @@ You're already using it! Here's how to get the most out of it:
 
 ---
 
-## Order of Operations
+## 5-Week Schedule (Internship Starts Week 6)
 
-| Week | Focus |
-|------|-------|
-| 1–2 | JS Fundamentals (javascript.info) + practice in browser console |
-| 3 | HTML basics + build a simple interactive webpage |
-| 4 | OOP in JS — build the FileStorage class |
-| 5 | Solve the cloud storage interview problem end-to-end in JS |
-| Ongoing | Use Claude Code to iterate, explain, and extend your solutions |
+| Week | Focus | Goal |
+|------|-------|------|
+| **1** | JS Fundamentals | Work through javascript.info "The JavaScript Language." Focus on functions, arrays/objects, async/await. Skip browser-specific content for now. |
+| **2** | JSON + OOP | JSON first (quick), then classes and inheritance in JS. End the week by building the `FileStorage` class from Phase 3. |
+| **3** | Cloud Storage Interview Problem | Implement `store_file` / `get_file` in JavaScript end-to-end. This is the most important week — it combines chunking, OOP, async/await, and JSON all at once. Work through it with Claude Code. **Do not let this slip.** |
+| **4** | HTML + DOM | Build a simple interactive webpage (to-do list or file upload UI). This is how JS is used in real "go to market tooling." |
+| **5** | Buffer + Polish | Catch up on weak spots. Practice explaining your solutions out loud as if in an interview. |
 
 ---
 
