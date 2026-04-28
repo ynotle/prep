@@ -5,9 +5,13 @@
     <script>
       //alert is an modal window, meaning that it can't interact with other things on page until this has been resolved
 
-      let age = prompt('How old are you?', 100);
+      let age = prompt("How's old are youj?", 100);
 
       alert(`You are ${age} years old!`); // You are 100 years old!
+      
+      let isBoss = confirm("Are you the boss?");
+
+      alert( isBoss ); // true if OK is pressed
       let message;
       message = 'Hello!';
       alert(message); // shows the variable content
